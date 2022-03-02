@@ -1,8 +1,7 @@
 import "./Footer.css";
-function Footer()
-{
-return
-{
+function Footer(){
+
+return(
     <div>
         <nav>
  <a href="http://google.com">Google</a>
@@ -11,6 +10,9 @@ return
  </nav>
  <p> &copy; All rights reserved 2022</p>
     </div>
-}
+);
 }
 export default Footer;
+
+
+  

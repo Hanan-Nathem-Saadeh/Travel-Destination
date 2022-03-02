@@ -1,12 +1,8 @@
- import "./Header.css";
+//  import "./Header.css";
 
-function Header()
-{
-return
-{
-<div>
-<h1>Travel Destination</h1>
-</div>
-}
-}
-export default Header;
+function Header() {
+    return (
+        <h1>Traveling Agency</h1>
+    );
+  }
+  export default Header;

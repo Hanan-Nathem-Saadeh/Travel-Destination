@@ -1,8 +1,15 @@
-//  import "./Header.css";
-
+import "./Header.css";
+import React from 'react';
+import Nav from "../Navbar/Navbar";
 function Header() {
     return (
-        <h1>Traveling Agency</h1>
+        <>
+            <Nav />
+            <h1>Traveling Agency</h1>
+
+
+        </>
     );
-  }
-  export default Header;
+
+}
+export default Header;

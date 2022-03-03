@@ -1,11 +1,16 @@
 import React from 'react';
+import TourDetails from "./components/TourDetails/TourDetails";
+import Home from "./components/home/Home";
+import { Routes, Route } from "react-router-dom";
+import data from  "./data/data.json";
 
- import Home from "./components/home/Home";
+function App() {
+    return (
+    <Routes>
+    <Route path="/" element={<Home/>} />
+    <Route path="city/:id" element={<TourDetails data={data} />} />
+  </Routes>
 
- function App() {
- return(
-
-<Home/>
- )
+    );
 }
 export default App; 

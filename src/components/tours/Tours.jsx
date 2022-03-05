@@ -1,25 +1,19 @@
-import "./Tours.css";
+import Tour from "../tours/tour/Tour";
 import React from 'react';
 
-const Tours = (props) => {
-    return (
+let Tours = ({data}) => {
+    return(
         <>
             {
-                props.tours.map(Tour => {
-                    return (
-                        <div>
-                            <p id="head">{Tour.name}</p>
-                            <img id="img1" src={Tour.image} alt="" />
-                            {/* <Link key={city.id} to={`city/${city.id}`}>
-                                <Tour data={city} />
-                            </Link> */}
-                        </div>
+                data.map((city) => {
+                    return(
+                        <Tour city={city}/>
                     )
 
                 })
             }
         </>
     )
-}
+};
 
 export default Tours;

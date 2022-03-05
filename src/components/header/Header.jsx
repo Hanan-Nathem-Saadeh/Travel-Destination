@@ -1,14 +1,12 @@
 import "./Header.css";
 import React from 'react';
-import Nav from "../Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 function Header() {
     return (
-        <>
-            <Nav />
-            <h1>Traveling Agency</h1>
-
-
-        </>
+        <header id="header">
+            <Navbar id ="navBr" />
+            <h1 id ="h1">Traveling Agency</h1>
+       </header>
     );
 
 }

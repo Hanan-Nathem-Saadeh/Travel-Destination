@@ -3,29 +3,33 @@ import Header from '../header/Header';
 import Footer from "../footer/Footer";
 import { useParams } from "react-router-dom";
 
+import { useState } from "react";
 const TourDetails = ({ data }) => {
-  const { id } = useParams();
+  let { id } = useParams();
+  let city = data.filter(city => city.id === id);
 
-  return (<>
+  const [seeMore,setSeeMore]=useState(false);
+  let seeMoreHandle =()=>{
+     setSeeMore(!seeMore);
+  }
+  return (
+    <>
       <Header />
-      <div >
-        {
-        data.filter((list) => list.id === id).map((list) => (
+      <article>
+        <div>
+          <h1> {city[0].name} </h1>
+          <p> 
+           {seeMore ? city[0].info : `${city[0].info.slice(0,100)}.............`} 
+            
+          <button onClick={()=>seeMoreHandle()}>{seeMore? "See Less" : "see More"}</button>
+          </p>
 
-            <div key={list.id}>
-
-              <h2>Name: {list.name}</h2>
-              <h4>Price: {list.price}</h4>
-
-              <img alt = "" src={list.image}></img>
-
-              <h4>Description: {list.info}</h4>
-            </div>
-          ))}
-
-      </div>
+          <img src={city[0].img} alt=""></img>
+        </div>
+      </article>
       <Footer />
-      </>
-  );
-};
+    </>
+
+  )
+}
 export default TourDetails;

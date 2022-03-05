@@ -5,7 +5,7 @@ function Footer() {
 
     return (
         <div id = "footer">
-            <nav>
+            <nav id ="nav">
                 <a href="http://google.com">Google</a>
                 <a href="http://facebook.com">Facebook</a>
                 <a href="https://instagram.com">Instagram</a>
